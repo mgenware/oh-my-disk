@@ -1,6 +1,6 @@
 {
   "name": "oh-my-disk",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Conditionally run a command when free disk space is under a threshold",
   "bin": {
     "oh-my-disk": "./dist/main.js"
