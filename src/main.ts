@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as disk from 'diskusage';
 import * as os from 'os';
 import * as util from 'util';
