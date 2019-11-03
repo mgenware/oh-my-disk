@@ -24,6 +24,8 @@ const cmd = getArg(1, 'cmd');
   const path = os.platform() === 'win32' ? 'c:' : '/';
   const { free } = await disk.check(path);
   if (free < threshold) {
+    // eslint-disable-next-line no-console
+    console.log(`${free} < ${threshold}, running command "${cmd}"`);
     const { stdout, stderr } = await execAsync(cmd);
     if (stdout) {
       // eslint-disable-next-line no-console
@@ -35,5 +37,8 @@ const cmd = getArg(1, 'cmd');
         `An error happened when running command "${cmd}"\n${stderr}\n`,
       );
     }
+  } else {
+    // eslint-disable-next-line no-console
+    console.log(`${free} >= ${threshold}, no action taken.`);
   }
 })();
