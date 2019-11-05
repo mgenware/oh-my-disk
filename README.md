@@ -7,5 +7,5 @@ Conditionally run a command when free disk space is under a threshold
 Run another command if free disk space is less than 500 MB:
 
 ```sh
-npx oh-my-disk 500000000 "echo DANGER"
+npx oh-my-disk 500mb "echo DANGER"
 ```
